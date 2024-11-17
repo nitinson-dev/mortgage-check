@@ -10,7 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
-import org.springframework.http.client.support.BasicAuthorizationInterceptor;
+//import org.springframework.http.client.support.BasicAuthorizationInterceptor;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.math.BigDecimal;
@@ -27,11 +27,11 @@ public class MortgageCheckControllerTest {
     @Autowired
     private TestRestTemplate restTemplate;
 
-    @Before
+    /*@Before
     public void setup() {
         BasicAuthorizationInterceptor bai = new BasicAuthorizationInterceptor("admin", "password");
         restTemplate.getRestTemplate().getInterceptors().add(bai);
-    }
+    }*/
 
     @Test
     public void getAllInterestRates() {

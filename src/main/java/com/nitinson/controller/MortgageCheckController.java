@@ -4,11 +4,12 @@ import com.nitinson.model.MortgageRatesList;
 import com.nitinson.model.MortgageRequest;
 import com.nitinson.model.MortgageResponse;
 import com.nitinson.service.MortgageService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
+
 
 @RestController
 @RequestMapping("/api")

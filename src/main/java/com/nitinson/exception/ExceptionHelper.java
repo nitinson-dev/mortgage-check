@@ -24,14 +24,12 @@ public class ExceptionHelper extends ResponseEntityExceptionHandler {
         return new ResponseEntity<>(new ErrorResponse(status, ex.getMessage()), status);
     }
 
-    @Override
     protected ResponseEntity<Object> handleHttpMessageNotReadable(HttpMessageNotReadableException ex, HttpHeaders headers, HttpStatus status, WebRequest request) {
         Throwable mostSpecificCause = ex.getMostSpecificCause();
         ErrorResponse errorResponse = new ErrorResponse(status, mostSpecificCause.getClass().getName() + " : " + mostSpecificCause.getMessage());
         return new ResponseEntity<>(errorResponse, headers, status);
     }
 
-    @Override
     protected ResponseEntity<Object> handleMethodArgumentNotValid(
             MethodArgumentNotValidException exception,
             HttpHeaders headers,
